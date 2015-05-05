@@ -3,7 +3,7 @@
 ; Version 1.0
 
 ; Change this to the DOMAIN\user you would like to use
-Local $user = "microsoft.com\administrator"
+Local $user = "securitymapper.com\administrator"
 ; Change this to the password you would like to use.  Special characters may be problematic.
 ; If you are dead set on using certain special characters remove $pass and edit line the ControlSend()
 ; line directly.
