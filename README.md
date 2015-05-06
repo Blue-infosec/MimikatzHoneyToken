@@ -9,3 +9,5 @@ Recommendations:
 
 - Create IDS rules looking for traffic using the fake user and password.  Also, consider creating IDS rules looking for the NTLM hash of the fake user.
 - Create log alarms looking for failed log on attempts from this user account.
+
+Check out the wiki for more information on how to use: https://github.com/SMAPPER/MimikatzHoneyToken/wiki
