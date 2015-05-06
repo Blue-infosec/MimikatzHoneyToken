@@ -2,6 +2,7 @@
 ; Last updated on 5/5/2015
 ; Version 1.1
 
+Opt("WinTitleMatchMode", 2)
 ; Change this.  Should be in domain\user format
 Local $user = "securitymapper.com\administrator"
 ; Change this to the password you would like to use.  Special characters may be problematic.
