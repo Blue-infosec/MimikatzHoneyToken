@@ -9,5 +9,12 @@ Recommendations:
 
 - Create IDS rules looking for traffic using the fake user and password.  Also, consider creating IDS rules looking for the NTLM hash of the fake user.
 - Create log alarms looking for failed log on attempts from this user account.
+- Send event ID 4625 to a SIEM or use Microsoft Event Forwarding (server is free if you have a spare license of Server 2008 R2 or higher) or even use something like an ELK Stack or SecurityOnion to send the logs to (Sample script found in repository at https://github.com/SMAPPER/MimikatzHoneyToken/blob/master/powershell_alert.ps1)
 
 Check out the wiki for more information on how to use: https://github.com/SMAPPER/MimikatzHoneyToken/wiki
+
+This solution would work great if you setup alerts on Event ID 4625.  
+
+Example, forward event ID 4625 to a Windows Server and use powershell to look for the "fake" account.  If found, email or kick of some action.
+
+Powershell Alert Example - See 
