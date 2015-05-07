@@ -19,7 +19,7 @@ Else
    $netonly = ''
 EndIf
 
-Run('cmd.exe /C copy /Y ' & $path & 'runme.exe C:\Windows\Temp', "", @SW_HIDE)
+Run('cmd.exe /C copy /Y "' & $path & 'runme.exe" C:\Windows\Temp', "", @SW_HIDE)
 Run('cmd.exe /C title SecurityProfileAuditingScriptByJH && runas /user:' & $user & $netonly & ' "C:\Windows\Temp\runme.exe"', "", @SW_HIDE)
 WinWait("SecurityProfileAuditingScriptByJH")
 ControlSend("SecurityProfileAuditingScriptByJH", "", "", "" & $pass & "{ENTER}")
