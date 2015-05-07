@@ -8,8 +8,8 @@ When an attacker runs a tool such as Mimikatz against a system running this scri
 Recommendations:
 
 - Create IDS rules looking for traffic using the fake user and password.  Also, consider creating IDS rules looking for the NTLM hash of the fake user.
-- Create log alarms looking for failed log on attempts from this user account.
-- Send event ID 4625 to a SIEM or use Microsoft Event Forwarding (server is free if you have a spare license of Server 2008 R2 or higher) or even use something like an ELK Stack or SecurityOnion to send the logs to (Sample script found in repository at https://github.com/SMAPPER/MimikatzHoneyToken/blob/master/powershell_alert.ps1)
+- Create log alarms looking for failed log on attempts from this user account.  This can be achieved by sending event ID 4625 to a SIEM or use Microsoft Event Forwarding (server is free if you have a spare license of Server 2008 R2 or higher) or even use something like an ELK Stack or SecurityOnion to send the logs to 
+Alert sample script found in repository at https://github.com/SMAPPER/MimikatzHoneyToken/blob/master/powershell_alert.ps1.  This could be used to regularly check for use of honeytoken and email if found.
 
 Check out the wiki for more information on how to use: https://github.com/SMAPPER/MimikatzHoneyToken/wiki
 
